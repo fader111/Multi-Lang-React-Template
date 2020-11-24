@@ -24,8 +24,6 @@ function App(props) {
   const { t } = props;
   const langCallback = (event) => {
     let newLang = event.target.value;
-    console.log(newLang)
-    console.log("HERE")
     props.i18n.changeLanguage(newLang)
   }
 
