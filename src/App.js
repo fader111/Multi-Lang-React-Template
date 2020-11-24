@@ -40,12 +40,12 @@ function App(props) {
   const navMenuRouteData = [
     { text: t('navMenu.home'), link: '/', iconFunc: () => { return <HomeIcon /> } },
     { text: t('navMenu.browse'), link: "/browse", iconFunc: () => { return <PageviewIcon /> } },
-//    { text: t('navMenu.dashboard'), link: "/dashboard", iconFunc: () => { return <DashboardIcon /> } },
+    { text: t('navMenu.dashboard'), link: "/dashboard", iconFunc: () => { return <DashboardIcon /> } },
     { text: t('navMenu.profile'), link: "/profile", iconFunc: () => { return <AccountBoxIcon /> } },
     { text: t('navMenu.history'), link: "/history", iconFunc: () => { return <HistoryIcon /> } },
     { text: t('navMenu.social'), link: "/social", iconFunc: () => { return <PeopleIcon /> } },
   ]
-//           <Route path="/dashboard" render={(props) => <HomeDashboard {...props} t={t} /> } />  
+  
   return (
     <HashRouter initialEntries={['/drafts']} initialIndex={0}>
       <div style={{backgroundColor: "#DAE3E7"}}>
@@ -58,6 +58,7 @@ function App(props) {
         >
           <Route exact path="/" render={(props) => <HomePage {...props} t={t} /> } />
           <Route path="/browse" render={(props) => <BrowsePage {...props} t={t} /> } />
+          <Route path="/dashboard" render={(props) => <HomeDashboard {...props} t={t} /> } />  
           <Route path="/profile" render={(props) => <ProfileDashboard {...props} t={t} /> } />
           <Route path="/history" render={(props) => <HistoryDashboard {...props} t={t} /> } />
           <Route path="/social" render={(props) => <SocialDashboard {...props} t={t} /> } />

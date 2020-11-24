@@ -1,6 +1,8 @@
 import React from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { ListItemLink, ButtonAndIconLink } from './CustomLinks';
+// custom React Router links
+import CustomLink from './CustomLink';
+import CustomButtonLink from './CustomButtonLink';
 // LanguageSelector
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
@@ -20,12 +22,22 @@ import MenuIcon from '@material-ui/icons/Menu';
 // nav menu icons
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import AssignmentIcon from '@material-ui/icons/Assignment';
 /*
   Navigation Menu holds
     - navbar (for settings)
     - div to move all content down (so not obscurbed by navbar)
     - sidebar for route navigation
 */
+
+// Material UI components
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText'
+
+// Material UI components
+import { Button, Typography } from '@material-ui/core';
 
 const drawerWidth = 240;
 
@@ -182,24 +194,23 @@ export default function PersistentDrawerLeft(props) {
           >
             <MenuIcon />
           </IconButton>
-          <ButtonAndIconLink 
-            ariaLabel="back to home image"
-            to="/"
-            primary={""}
-            icon={<img src={logo} className={classes.logo} alt="logo" />} 
-          />
+          <CustomLink to={"/"}>
+            <Button 
+              aria-label={"back to home image"}
+              color="inherit"
+            >
+              <Typography variant="button" display="block" gutterBottom>
+                {""}
+              </Typography>
+              <img src={logo} className={classes.logo} alt="logo" />
+            </Button>
+          </CustomLink>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            <ButtonAndIconLink 
+            <CustomButtonLink 
               ariaLabel="sign-in"
               to="/signin"
               primary={signInText}
-              icon={<></>} 
-            />
-            <ButtonAndIconLink 
-              ariaLabel="register"
-              to="/register"
-              primary={registerText}
               icon={<></>} 
             />
             <Divider className={classes.divider} orientation="vertical" flexItem />
@@ -228,7 +239,18 @@ export default function PersistentDrawerLeft(props) {
           <Divider />
           <List>
             {routeData.map((obj, idx) => {
-              return <ListItemLink key={obj.text + idx} to={obj.link} primary={obj.text} icon={obj.iconFunc()} />
+              const icon = obj.iconFunc();
+              const primary = obj.text;
+              return (
+                <CustomLink key={obj.text + idx} to={obj.link}>
+                  <li>
+                    <ListItem button>
+                      {icon ? <ListItemIcon>{icon}</ListItemIcon> : null}
+                      <ListItemText primary={primary} />
+                    </ListItem>
+                  </li>
+                </CustomLink>
+              )
             })}
           </List>
         </div>

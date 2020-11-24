@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import { Link } from '@material-ui/core';
 
 export default function CustomLink(props) {
-  const { ariaLabel, to } = props;
+  const { to } = props;
 
   const renderLink = React.useMemo(
     () => React.forwardRef((itemProps, ref) => <RouterLink to={to} ref={ref} {...itemProps} />),
@@ -16,7 +16,6 @@ export default function CustomLink(props) {
 
   return (
     <Link 
-      aria-label={ariaLabel}
       component={renderLink}
       color="inherit"
     >
@@ -26,6 +25,5 @@ export default function CustomLink(props) {
 }
 
 CustomLink.propTypes = {
-  ariaLabel: PropTypes.string.isRequired,
   to: PropTypes.string.isRequired,
 };

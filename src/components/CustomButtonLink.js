@@ -1,3 +1,6 @@
+// necessary because, CustomLink applies Link formatting which looks poorly on buttons
+// also, button formatting is not centered when using CustomLink
+
 import React from 'react';
 // ReactRouter Link
 import { Link as RouterLink } from 'react-router-dom';
