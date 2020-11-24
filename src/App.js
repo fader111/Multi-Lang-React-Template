@@ -8,14 +8,14 @@ import NavigationMenu from "./components/NavigationMenu"
 import Footer from './components/Footer'
 // Pages
 import HomePage from './pages/HomePage';
-import BrowsePage from './pages/Browse/BrowsePage';
+import BrowsePage from './pages/BrowsePage';
 import SigninPage from './pages/SigninPage';
 import RegisterPage from './pages/RegisterPage';
 import ForgotPasswordPage from './pages/ForgotPasswordPage';
-import ProfileDashboard from './pages/ProfileDashboard'
-import HistoryDashboard from './pages/HistoryDashboard'
-import SocialDashboard from './pages/SocialDashboard';
-import HomeDashboard from './pages/HomeDashboard'
+import HomeDashboard from './pages/DashboardPage';
+import ProfileDashboard from './pages/ProfilePage'
+import HistoryDashboard from './pages/HistoryPage'
+import SocialDashboard from './pages/SocialPage';
 // Sidebar icons
 import HomeIcon from '@material-ui/icons/Home'
 import PageviewIcon from '@material-ui/icons/Pageview';
