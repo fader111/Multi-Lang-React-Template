@@ -9,8 +9,7 @@ import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 import MyBackgroundImg from './opacity-70-food-background.png'
 // Custom component & data
 import CustomLink from '../../components/CustomLink'
-import IconLabelCardList from '../../components/IconLabelCardList'
-import ContactForm from '../../components/ContactForm'
+import ContactComponent from '../../components/ContactComponent';
 // HomeContactData icons
 import PhoneIcon from '@material-ui/icons/Phone';
 import PrintIcon from '@material-ui/icons/Print';
@@ -122,11 +121,11 @@ export default function HomePage(props) {
         </Container>
       </div>
       <Container>
-        <Typography component="h3" variant="h3" align="center" color="textPrimary">
+        <Typography component="h4" variant="h4" align="center" style={{marginBottom: 10}}>
           {t("home.contactTitle")}
         </Typography>
-        <IconLabelCardList iconLabelList={homeContactData} />
-        <ContactForm
+        <ContactComponent
+          iconLabelList={homeContactData}
           messageTitle={t("home.messageTitle")}
           nameText={t("home.messageName")}
           emailText={t("home.messageEmail")}

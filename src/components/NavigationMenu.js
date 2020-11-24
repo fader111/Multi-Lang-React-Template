@@ -22,8 +22,6 @@ import MenuIcon from '@material-ui/icons/Menu';
 // nav menu icons
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import ExitToAppIcon from '@material-ui/icons/ExitToApp';
-import AssignmentIcon from '@material-ui/icons/Assignment';
 /*
   Navigation Menu holds
     - navbar (for settings)
