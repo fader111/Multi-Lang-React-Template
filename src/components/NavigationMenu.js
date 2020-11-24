@@ -1,25 +1,17 @@
 import React from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-// custom React Router links
+import clsx from 'clsx';
+// custom client-side routing with React Router
 import CustomLink from './CustomLink';
 import CustomButtonLink from './CustomButtonLink';
 // LanguageSelector
-import MenuItem from '@material-ui/core/MenuItem';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
-// LanguageSelector Icons
+import { MenuItem, FormControl, Select } from '@material-ui/core';
 import TranslateIcon from '@material-ui/icons/Translate';
-// Navigation Menu (navbar && sidebar)
-import clsx from 'clsx';
-import Drawer from '@material-ui/core/Drawer';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
-import IconButton from '@material-ui/core/IconButton';
+// appbar
+import { Drawer, CssBaseline, AppBar, Toolbar, List, Divider, IconButton } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
-// nav menu icons
+// sidebar
+import { ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 /*
@@ -28,14 +20,6 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
     - div to move all content down (so not obscurbed by navbar)
     - sidebar for route navigation
 */
-
-// Material UI components
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText'
-
-// Material UI components
-import { Button, Typography } from '@material-ui/core';
 
 const drawerWidth = 240;
 
@@ -46,7 +30,7 @@ const useStyles2 = makeStyles((theme) => ({
 }));
 
 // Cannot add styling directly onto TranslateIcon in IconComponent which requires string input
-const whiteTranslateIcon = () => { return (<TranslateIcon style={{color:"inherit"}} />) }
+
 
 function LanguageSelector(props) {
   const { onSelectLanguage } = props;
@@ -62,10 +46,10 @@ function LanguageSelector(props) {
     <FormControl className={classes.formControl}>
       <Select
         id="demo-simple-select"
-        IconComponent={whiteTranslateIcon}
+        IconComponent={() => <TranslateIcon style={{ color: "inherit" }} />}
         value={lang}
         onChange={handleChange}
-        style={{color:"inherit", fontSize: '18px' }}
+        style={{ color: "inherit", fontSize: '18px' }}
       >
         <MenuItem value={'en'}>English</MenuItem>
         <MenuItem value={'es'}>Español</MenuItem>
@@ -154,14 +138,13 @@ const useStyles = makeStyles((theme) => ({
     overflow: 'auto',
   },
 }));
-    
+
 
 export default function PersistentDrawerLeft(props) {
+  const { logo, routeData, langCallback, signInText } = props;
   const classes = useStyles();
-  const { logo, routeData, langCallback, signInText, registerText } = props;
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
-
   const toggleDrawer = (open) => (event) => {
     if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
       return;
@@ -192,21 +175,19 @@ export default function PersistentDrawerLeft(props) {
           >
             <MenuIcon />
           </IconButton>
-          <CustomLink to={"/"}>
-            <Button 
-              aria-label={"back to home image"}
-              color="inherit"
-            >
-              <img src={logo} className={classes.logo} alt="logo" />
-            </Button>
-          </CustomLink>
+          <CustomButtonLink
+            ariaLabel="back to home logo"
+            to="/"
+            primary={""}
+            icon={<img src={logo} className={classes.logo} alt="logo" />}
+          />
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            <CustomButtonLink 
+            <CustomButtonLink
               ariaLabel="sign-in"
               to="/signin"
               primary={signInText}
-              icon={<></>} 
+              icon={<></>}
             />
             <Divider className={classes.divider} orientation="vertical" flexItem />
             <LanguageSelector onSelectLanguage={langCallback} />
