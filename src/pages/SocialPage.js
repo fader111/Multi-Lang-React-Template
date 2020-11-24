@@ -4,7 +4,7 @@ import { Container } from '@material-ui/core';
 export default function SocialDashboard() {
   return (
     <Container>
-      <h2>SOCIAL</h2>
+      <h1 style={{textAlign: "center"}}>SOCIAL</h1>
     </Container>
   )
 }

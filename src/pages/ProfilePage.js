@@ -22,7 +22,7 @@ export default function CenteredGrid() {
 
   return (
     <Container>
-      <h1>Profile</h1>
+      <h1 style={{textAlign: "center"}}>Profile</h1>
     </Container>
   );
 }
