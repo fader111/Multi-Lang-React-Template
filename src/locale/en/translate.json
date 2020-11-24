@@ -4,11 +4,8 @@
             "register": "REGISTER",
             "signIn": "SIGN IN",
             "home": "HOME",
-            "browse": "BROWSE",
-            "dashboard": "DASHBOARD",
-            "profile": "PROFILE",
-            "history": "HISTORY",
-            "social": "SOCIAL"
+            "pageOne": "PAGE 1",
+            "pageTwo": "PAGE 2"
         },
         "home": {
             "landing": "HoloMeme",
@@ -45,19 +42,10 @@
             "forgotPass": "Forgot Password?",
             "noAccountText": "No account? Register here"
         },
-        "browse": {
-          "recipes": "Recipes"  
+        "pageOne": {
+            "title": "Recipes"  
         },
-        "homeDashboard": {
-            "title": "Sign In"
-        },
-        "historyDashboard": {
-            "title": "Sign In"
-        },
-        "profileDashboard": {
-            "title": "Sign In"
-        },
-        "socialDashboard": {
+        "pageTwo": {
             "title": "Sign In"
         }
     }

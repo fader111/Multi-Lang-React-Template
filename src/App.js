@@ -31,8 +31,8 @@ function App(props) {
 
   const navMenuRouteData = [
     { text: t('navMenu.home'), link: '/', iconFunc: () => { return <HomeIcon /> } },
-    { text: t('navMenu.examplePage'), link: "/pageOne", iconFunc: () => { return <PageviewIcon /> } },
-    { text: t('navMenu.dashboard'), link: "/pageTwo", iconFunc: () => { return <DashboardIcon /> } } 
+    { text: t('navMenu.pageOne'), link: "/pageOne", iconFunc: () => { return <PageviewIcon /> } },
+    { text: t('navMenu.pageTwo'), link: "/pageTwo", iconFunc: () => { return <DashboardIcon /> } } 
   ];
   
   return (
