@@ -120,7 +120,7 @@ export default function HomePage(props) {
           <h3 align="right" style={{ paddingRight: '50px' }}>- Vizzini{'   '}</h3>
         </Container>
       </div>
-      <Container>
+      <div>
         <Typography component="h4" variant="h4" align="center" style={{marginBottom: 10}}>
           {t("home.contactTitle")}
         </Typography>
@@ -132,7 +132,7 @@ export default function HomePage(props) {
           messageText={t("home.messageText")}
           messageButtonText={t("home.messageButtonText")}
         />
-      </Container>
+      </div>
     </div>
   );
 }
