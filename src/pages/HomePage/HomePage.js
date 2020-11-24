@@ -37,11 +37,12 @@ const homeContactData = [
 ];
 
 const useStyles = makeStyles((theme) => ({
-  landingRoot: {
-    padding: theme.spacing(25, 0, 55),
+  heroContent: {
+    padding: theme.spacing(25, 0, 60),
+    margin: theme.spacing(0, 0, 10)
   },
-  landingText: {
-    paddingRight: theme.spacing(50)
+  heroButtons: {
+    marginTop: theme.spacing(4),
   },
   primaryButton: {
     color: "white",
@@ -53,58 +54,60 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function HomePage(props) {
-  const { t, id } = props;
+  const { t, id } = props
   const classes = useStyles();
   const mobile = false
 
-  const [hololiveArrowShown, setHololiveArrowShown] = useState(false);
-  const [animemeButtonShown, setAnimemeButtonShown] = useState(false);
-  const hololiveButton = hololiveArrowShown ? <>{t("home.landingHololiveButton")} <ArrowRightAltIcon /></> : <>{t("home.landingHololiveButton")}</>
-  const animemeButton = animemeButtonShown ? <>{t("home.landingAnimemeButton")} <ArrowRightAltIcon /></> : <>{t("home.landingAnimemeButton")}</>
+  const [registerArrowShown, setRegisterArrowShown] = useState(false);
+  const [signInArrowShown, setSignInArrowShown] = useState(false);
+  const registerButton = registerArrowShown ? <>Register <ArrowRightAltIcon /></> : <>Register</>
+  const signInButton = signInArrowShown ? <>Sign In <ArrowRightAltIcon /></> : <>Sign In</>
 
   return (
     <div id={id}>
-      <div className={classes.landingRoot} style={{ backgroundImage: `url(${MyBackgroundImg})` }}>
-        <div className={classes.landingText}>
+      <div className={classes.heroContent} style={{ backgroundImage: `url(${MyBackgroundImg})` }}>
+        <Container maxWidth="sm">
           <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-            {t("home.landing")}
+            Share Recipes with Friends 
           </Typography>
-          <div className={classes.landingButtons}>
+          <div className={classes.heroButtons}>
             <Grid container spacing={2} justify="center">
               <Grid item>
                 <CustomLink
                   ariaLabel="Hololive Link"
-                  to="/hololive"
+                  to="/register"
                 >
                   <Button
                     className={classes.primaryButton}
                     variant="contained"
                     color="primary"
-                    onMouseEnter={() => setHololiveArrowShown(true)}
-                    onMouseLeave={() => setHololiveArrowShown(false)}
+                    onMouseEnter={() => setRegisterArrowShown(true)}
+                    onMouseLeave={() => setRegisterArrowShown(false)}
                   >
-                    {hololiveButton}
+                    {registerButton}
                   </Button>
                 </CustomLink>
               </Grid>
               <Grid item>
                 <CustomLink
                   ariaLabel="Animemes Link"
-                  to="/animeme"
+                  to="/login"
                 >
                   <Button
                     className={classes.primaryButton}
                     variant="contained"
                     color="primary"
-                    onMouseEnter={() => setAnimemeButtonShown(true)}
-                    onMouseLeave={() => setAnimemeButtonShown(false)}
+                    onMouseEnter={() => setSignInArrowShown(true)}
+                    onMouseLeave={() => setSignInArrowShown(false)}
                   >
-                    {animemeButton}
+                    {signInButton}
                   </Button>
                 </CustomLink>
               </Grid>
             </Grid>
           </div>
+        </Container>
+        <Container>
           <h3
             align="center"
             style={{
@@ -113,19 +116,15 @@ export default function HomePage(props) {
               marginTop: mobile ? '0.5em' : '1.5em',
             }}
           >
-            {t("home.landingQuote")}
+            "Food is the ingredient that binds us together."
           </h3>
-          <h3 align="right" style={{ paddingRight: '50px' }}>- {t("home.landingQuoteAuthor")}</h3>
-        </div>
+          <h3 align="right" style={{ paddingRight: '50px' }}>- Vizzini{'   '}</h3>
+        </Container>
       </div>
-      <br />
-      <br />
       <Container>
         <Typography component="h3" variant="h3" align="center" color="textPrimary">
           {t("home.contactTitle")}
         </Typography>
-        <br />
-        <br />
         <IconLabelCardList iconLabelList={homeContactData} />
         <ContactForm
           messageTitle={t("home.messageTitle")}
