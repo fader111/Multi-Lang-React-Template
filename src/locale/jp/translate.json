@@ -1,0 +1,64 @@
+{
+    "translations": {
+        "navMenu": {
+            "register": "新規会員登録",
+            "signIn": "ログイン",
+            "home": "HOME",
+            "browse": "BROWSE",
+            "dashboard": "DASHBOARD",
+            "profile": "PROFILE",
+            "history": "HISTORY",
+            "social": "SOCIAL"
+        },
+        "home": {
+            "landing": "HoloMeme (ホロミム)",
+            "landingHololiveButton": "ホロライブ",
+            "landingAnimemeButton": "アニメのミム",
+            "landingQuote": "\"Words are memes that can be pronounced\"",
+            "landingQuoteAuthor": "Shameless Plagiarizer",
+            "contactTitle": "お問い合わせする",
+            "messageTitle": "ヘルプでは解決できないご質問は、こちらからご連絡ください",
+            "messageName": "名前",
+            "messageEmail": "メールアドレス",
+            "messageText": "メッセージ",
+            "messageButtonText": "メッセージを送る"
+        },
+        "forgotPassword": {
+            "title": "パスワードを忘れた / ログインできない",
+            "email": "メールアドレス",
+            "submit": "送る"
+        },
+        "register": {
+            "title": "新規会員登録",
+            "email": "メールアドレス",
+            "password": "パスワード",
+            "registerButton": "新規会員登録",
+            "forgotPass": "パスワードを忘れた?",
+            "haveAcctText": "すでにアカウントをお持ちですか？ ここでログインする"
+        },
+        "signin": {
+            "title": "ログイン",
+            "email": "メールアドレス",
+            "password": "パスワード",
+            "rememberMe": "次回もこ のログイン名 を使 用する",
+            "signInButton": "ログイン",
+            "forgotPass": "パスワードを忘れた?",
+            "noAccountText": "はじめての方は登録手続きへお進みください。"
+        },
+        "browse": {
+          "recipes": "Recipes"  
+        },
+        "homeDashboard": {
+            "title": "Sign In"
+        },
+        "historyDashboard": {
+            "title": "Sign In"
+        },
+        "profileDashboard": {
+            "title": "Sign In"
+        },
+        "socialDashboard": {
+            "title": "Sign In"
+        }
+    }
+}

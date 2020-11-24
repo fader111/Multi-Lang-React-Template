@@ -1,0 +1,64 @@
+{
+    "translations": {
+        "navMenu": {
+            "register": "INSCRIBIR",
+            "signIn": "REGISTRARSE",
+            "home": "INICIO",
+            "browse": "BROWSE",
+            "dashboard": "DASHBOARD",
+            "profile": "PROFILE",
+            "history": "HISTORY",
+            "social": "SOCIAL"
+        },
+        "home": {
+            "landing": "HoloMeme",
+            "landingHololiveButton": "Hololive",
+            "landingAnimemeButton": "Animemes",
+            "landingQuote": "\"Words are memes that can be pronounced\"",
+            "landingQuoteAuthor": "Shameless Plagiarizer",
+            "contactTitle": "CONTACTARNOS",
+            "messageTitle": "Mensaje",
+            "messageName": "Nombre",
+            "messageEmail": "Email",
+            "messageText": "Mensaje",
+            "messageButtonText": "Envia Mensaje"
+        },
+        "forgotPassword": {
+            "title": "Recupera contraseña",
+            "email": "Email",
+            "submit": "Envia"
+        },
+        "register": {
+            "title": "Registro",
+            "email": "Email",
+            "password": "Contraseña",
+            "registerButton": "Registro",
+            "forgotPass": "Se te olvidó tu contraseña?",
+            "haveAcctText": "¿Tiene una cuenta? Inicia sesión"
+        },
+        "signin": {
+            "title": "Identifícate",
+            "email": "Email",
+            "password": "Contraseña",
+            "rememberMe": "Remember me",
+            "signInButton": "Identifícate",
+            "forgotPass": "Se te olvidó tu contraseña?",
+            "noAccountText": "¿No tiene una cuenta? Registra aquí"
+        },
+        "browse": {
+          "recipes": "Recipes"  
+        },
+        "homeDashboard": {
+            "title": "Sign In"
+        },
+        "historyDashboard": {
+            "title": "Sign In"
+        },
+        "profileDashboard": {
+            "title": "Sign In"
+        },
+        "socialDashboard": {
+            "title": "Sign In"
+        }
+    }
+}
