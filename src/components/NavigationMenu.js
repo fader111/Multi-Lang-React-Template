@@ -199,9 +199,6 @@ export default function PersistentDrawerLeft(props) {
               aria-label={"back to home image"}
               color="inherit"
             >
-              <Typography variant="button" display="block" gutterBottom>
-                {""}
-              </Typography>
               <img src={logo} className={classes.logo} alt="logo" />
             </Button>
           </CustomLink>
