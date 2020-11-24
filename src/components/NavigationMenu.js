@@ -177,7 +177,7 @@ export default function PersistentDrawerLeft(props) {
           <CustomButtonLink
             ariaLabel="back to home logo"
             to="/"
-            primary={""}
+            primary={"EXAMPLE"}
             icon={<img src={logo} className={classes.logo} alt="logo" />}
           />
           <div className={classes.grow} />
