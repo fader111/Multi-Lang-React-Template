@@ -24,7 +24,7 @@ import HistoryIcon from '@material-ui/icons/History';
 import PeopleIcon from '@material-ui/icons/People';
 import DashboardIcon from '@material-ui/icons/Dashboard';
 // get local from root
-import logo from './TastePerfect-Logo.png'
+import logo from './logo.svg'
 
 function App(props) {
   // custom hook to call i18n changeLanguage function
