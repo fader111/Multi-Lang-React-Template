@@ -20,12 +20,12 @@ function Copyright() {
 
 const useStyles = makeStyles((theme) => ({
   footer: {
-    // marginTop: theme.spacing(8),
+    marginTop: theme.spacing(8),
     padding: theme.spacing(6, 0),
   },
 }));
 
-export default function Footer(props) {
+export default function Footer() {
   const classes = useStyles();
   return (
     <footer className={classes.footer}>
@@ -38,8 +38,3 @@ export default function Footer(props) {
     </footer>
   );
 }
-
-Footer.propTypes = {
-  description: PropTypes.string,
-  title: PropTypes.string,
-};
