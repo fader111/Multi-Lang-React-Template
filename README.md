@@ -1,33 +1,32 @@
-![TastePerfect logo](src/TastePerfect-Logo.png)
+<img align="right" src="src/logo.svg" alt="React logo" width="200"/>
 
-<h4 align="center">A localized, personalized community recipe site appealing to Chinese & Spanish speakers.</h4>
+<h4 align="center">A template for a multi-language React frontend</h4>
 <p align="center">
   <a href="#key-features">Key Features</a> •
   <a href="#how-to-use">How To Use</a> •
-  <a href="#credits">Credits</a> •
   <a href="#installation">Installation</a>
 </p>
 
-## Deployed here:
-See it live on Netlify here: [Deployed Netlify Site](https://github.com/Borghese-Gladiator/recipe-sharing-site)
+Uses: React + Material-UI + React Router + react-i18next (i18n for React) 
 
 ## Key Features
 
-* Intuitive UI (similar to AllRecipes)
-  - enables users to browse community recipes
-  - enables users to post recipes
-  - enables users to see their posts in their dashboard
-  - enables users to their preferred language
-* Internationalization
-  - Engineered software and rewrote components to enable multi-language support and components are not fixed with English values
-  - Localization - used i18n to change languages on the page with minimum rerenders
-  - Stored recipe data and translate prior to serving, so the client-side performance will not suffer
-* Personalization
-  - Includes user authentication so food browsing can be personalized based on history
-  - Users can edit history to change it to their preferences and remove recipes they didn't like
+* Material UI
+  - uses built-in Material UI components and useStyles function to apply styling
+  - no big stylesheet - enables customization of each component (unlike say Bootstrap)
+* React Router
+  - client-side routing for pages in App.js
+* react-i18next
+  - locale files contain JSON for exact translations of page text
+  - sign in / register / forgot password support English, Chinese, Japanese, and Spanish.
+  - pages load text node content from JSON files so app can support all languages
 
 ## How to Use
-to do - write this with screenshots
+1. Decide what languages & delete language folders you don't need from locale folder
+2. Write custom pages for your application (**write text as t('pageName.pageText')** to allow for multi language easily)
+3. Change App.js Routes inside Router to link to your own custom pages (use example of ExamplePage)
+4. Change App.js constant called navMenuRouteData to your own custom Routes (constant passed to Sidebar (in NavigationMenu component))
+5. Write new content into locale pages
 
 ## Author
 Borghese-Gladiator
