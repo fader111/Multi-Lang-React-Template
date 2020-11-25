@@ -1,11 +1,13 @@
 <img align="right" src="src/logo.svg" alt="React logo" width="200"/>
 
-<h4 align="center">A template for multilanguage React frontends</h4>
+<h4 align="center">A template for a multi-language React frontend</h4>
 <p align="center">
   <a href="#key-features">Key Features</a> •
   <a href="#how-to-use">How To Use</a> •
   <a href="#installation">Installation</a>
 </p>
+
+Uses: React + Material-UI + React Router + react-i18next (i18n for React) 
 
 ## Key Features
 
@@ -14,7 +16,7 @@
   - no big stylesheet - enables customization of each component (unlike say Bootstrap)
 * React Router
   - client-side routing for pages in App.js
-* i18n
+* react-i18next
   - locale files contain JSON for exact translations of page text
   - sign in / register / forgot password support English, Chinese, Japanese, and Spanish.
   - pages load text node content from JSON files so app can support all languages
