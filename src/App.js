@@ -44,7 +44,7 @@ function App(props) {
           registerText={t('navMenu.register')}
           signInText={t('navMenu.signIn')}
         >
-          <Route exact path="/" render={(props) => <HomePage {...props} t={t} backgroundImg={MyBackgroundImg} /> } />
+          <Route exact path="/" render={(props) => <HomePage {...props} t={t} MyBackgroundImg={MyBackgroundImg} /> } />
           <Route path="/pageOne" render={(props) => <ExamplePage {...props} t={t} /> } />
           <Route path="/pageTwo" render={(props) => <ExamplePage {...props} t={t} /> } />
           <Route path="/signin" render={(props) => <SigninPage {...props} t={t} /> } />
