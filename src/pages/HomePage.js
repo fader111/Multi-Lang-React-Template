@@ -1,20 +1,15 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
-import Grid from '@material-ui/core/Grid'
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
-// Assets
+// HomePage
+import { Button, Container, Grid, Typography } from '@material-ui/core';
 import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
-import MyBackgroundImg from './opacity-70-food-background.png'
-// Custom component & data
-import CustomLink from '../../components/CustomLink'
-import ContactComponent from '../../components/ContactComponent';
-// HomeContactData icons
 import PhoneIcon from '@material-ui/icons/Phone';
 import PrintIcon from '@material-ui/icons/Print';
 import MailIcon from '@material-ui/icons/Mail';
 import RoomIcon from '@material-ui/icons/Room';
+// Custom component & data
+import CustomLink from '../components/CustomLink'
+import ContactComponent from '../components/ContactComponent';
 
 const homeContactData = [
   {
@@ -53,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function HomePage(props) {
-  const { t, id } = props
+  const { t, id, MyBackgroundImg } = props
   const classes = useStyles();
   const mobile = false
 

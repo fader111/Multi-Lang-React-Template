@@ -18,6 +18,7 @@ import PageviewIcon from '@material-ui/icons/Pageview';
 import DashboardIcon from '@material-ui/icons/Dashboard';
 // get local from root
 import logo from './logo.svg'
+import MyBackgroundImg from './opacity-70-food-background.png'
 
 function App(props) {
   // custom hook to call i18n changeLanguage function
@@ -43,7 +44,7 @@ function App(props) {
           registerText={t('navMenu.register')}
           signInText={t('navMenu.signIn')}
         >
-          <Route exact path="/" render={(props) => <HomePage {...props} t={t} /> } />
+          <Route exact path="/" render={(props) => <HomePage {...props} t={t} backgroundImg={MyBackgroundImg} /> } />
           <Route path="/pageOne" render={(props) => <ExamplePage {...props} t={t} /> } />
           <Route path="/pageTwo" render={(props) => <ExamplePage {...props} t={t} /> } />
           <Route path="/signin" render={(props) => <SigninPage {...props} t={t} /> } />
