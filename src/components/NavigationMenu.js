@@ -29,9 +29,6 @@ const useStyles2 = makeStyles((theme) => ({
   }
 }));
 
-// Cannot add styling directly onto TranslateIcon in IconComponent which requires string input
-
-
 function LanguageSelector(props) {
   const { onSelectLanguage } = props;
   const classes = useStyles2();
@@ -131,6 +128,7 @@ const useStyles = makeStyles((theme) => ({
       width: theme.spacing(9),
     },
   },
+  appBarSpacer: theme.mixins.toolbar,
   content: {
     flexGrow: 1,
     height: '100vh',
