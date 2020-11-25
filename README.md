@@ -7,7 +7,7 @@
   <a href="#installation">Installation</a>
 </p>
 
-Uses: React + Material-UI + React Router + react-i18next (i18n for React) 
+React + Material-UI + React Router + react-i18next (i18n for React) 
 
 ## Key Features
 
