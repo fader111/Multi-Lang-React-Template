@@ -62,7 +62,7 @@ export default function HomePage(props) {
       <div className={classes.heroContent} style={{ backgroundImage: `url(${MyBackgroundImg})` }}>
         <Container maxWidth="sm">
           <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-            Share Recipes with Friends 
+            Начало положено! 
           </Typography>
           <div className={classes.heroButtons}>
             <Grid container spacing={2} justify="center">
